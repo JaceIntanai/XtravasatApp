@@ -1,0 +1,56 @@
+import React, { Component, useState } from 'react';
+import { Logo, Button, Textinput, Background } from '../components/common'
+import { theme } from '../components/core/theme';
+
+import { auth, styles } from '../services';
+
+class LoginPage extends Component {
+
+    state = { email: '', password: '', error: 'Login Failed!' };
+
+    onLoginPressed() {
+        const {email , password} = this.state;
+
+        auth.doSignInWithEmailAndPassword(email, password)
+        .catch( error => {
+                alert(error)
+            }
+        )
+    };
+
+    render(){
+        return (
+            <Background>
+                <Logo />
+                <Textinput
+                    label="Email"
+                    returnKeyType="next"
+                    value={this.state.email}
+                    onChangeText={email => this.setState({ email })}
+                    autoCapitalize="none"
+                    autoCompleteType="email"
+                    textContentType="emailAddress"
+                    keyboardType="email-address"
+                />
+    
+                <Textinput
+                    label="Password"
+                    returnKeyType="done"
+                    value={this.state.password}
+                    onChangeText={password => this.setState({ password })}
+                    secureTextEntry
+                />
+    
+                <Button 
+                    mode="contained" 
+                    onPress={this.onLoginPressed.bind(this)}
+                >
+                    Login
+                </Button>
+            </Background>
+        );
+    }
+    
+};
+
+export default LoginPage;

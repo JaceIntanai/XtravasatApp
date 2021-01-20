@@ -25,8 +25,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#005daa',
     borderRadius: 5,
     height: 50,
-    // left:20,
-    // alignItems: "center",
   },
   text: {
     fontWeight: 'bold',

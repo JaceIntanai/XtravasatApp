@@ -1,13 +1,13 @@
-import React, { memo } from 'react';
-import { View, StyleSheet, Text } from 'react-native';
-import { TextInput as Input } from 'react-native-paper';
+import React from 'react';
+import { View, StyleSheet, Text, TextInput as Input } from 'react-native';
+// import { TextInput as Input } from 'react-native-paper';
 import { theme } from '../core/theme';
 
 const TextAge = ({ errorText, ...props }) => (
   <View style={styles.container}>
     <Input
       style={styles.input}
-      selectionColor={theme.colors.primary}
+      // selectionColor={theme.colors.primary}
       underlineColor="transparent"
       mode="outlined"
       {...props}
@@ -19,11 +19,18 @@ const TextAge = ({ errorText, ...props }) => (
 const styles = StyleSheet.create({
   container: {
     width: '50%',
-    marginVertical: 12,
-    right:-60,
+    // marginVertical: 20,
   },
   input: {
-    backgroundColor: theme.colors.surface,
+    fontSize: 16,
+    fontWeight: 'bold',
+    borderWidth: 1,
+    borderColor: '#6a6e78',
+    paddingLeft: 5,
+    borderRadius: 10,
+    height: 50,
+    color: 'black',
+    
   },
   error: {
     fontSize: 14,

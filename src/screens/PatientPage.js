@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header, Button, Background, BackButton, Textinput, TextAge } from '../components/common'
+import { Header, Button, Background, BackButton, Textform, TextAge , Msg } from '../components/common'
 import { View, StyleSheet, TextInput} from 'react-native';
 import { auth } from '../services';
 
@@ -21,27 +21,33 @@ class PatientPage extends Component{
                     goBack={() => this.props.navigation.navigate('home')}
                 />
                 <Header>ผู้ป่วยใหม่</Header>
-                <Textinput 
+                <Msg> หมายเลขอ้างอิง* </Msg>
+                <Textform 
                     label="หมายเลขอ้างอิง"
                     placeholder="หมายเลขอ้างอิง"
                 />
-                <TextAge 
+                <Msg> อายุ* </Msg>
+                <TextAge
                     label="อายุ"
                     placeholder="อายุ"
                 />
-                <Textinput 
+                <Msg> เพศ* </Msg>
+                <Textform 
                     label="เพศ"
                     placeholder="เพศ"
                 />
-                <Textinput 
+                <Msg> สิทธิการรักษา* </Msg>
+                <Textform 
                     label="สิทธิการรักษา"
                     placeholder="สิทธิการรักษา"
                 />
-                <Textinput 
+                <Msg> การวินิจฉัยโรค* </Msg>
+                <Textform 
                     label="การวินิจฉัยโรค"
                     placeholder="การวินิจฉัยโรค"
                 />
-                <Textinput 
+                <Msg> โรคร่วม (Co mobility) * </Msg>
+                <Textform 
                     label="โรคร่วม"
                     placeholder="โรคร่วม"
                 />

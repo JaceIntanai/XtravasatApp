@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import { Logo, Button, Background, LogOutButton } from '../components/common'
+import { Logo, Button, Background, LogOutButton , ButtonLink , Header} from '../components/common'
 import { auth } from '../services';
 
 class HomePage extends Component{
@@ -16,26 +16,26 @@ class HomePage extends Component{
     render(){
         return (
         <Background>
-            <Button mode="contained" 
-                onPress={() => this.clickLogout()}
-            >
-                LOGOUT
-            </Button>
-            <Logo />
-            <Button mode="contained" 
+            <LogOutButton 
+                    goBack={() => this.clickLogout()}
+            />
+            
+            <Header> XtraVasat </Header>
+            
+            <ButtonLink mode="contained" 
                 onPress={() => this.newPatient()}
             >
                 ผู้ป่วยใหม่
-            </Button>
-            <Button mode="contained">
+            </ButtonLink>
+            <ButtonLink mode="contained">
                 ติดตามประเมินอาการ
-            </Button>
-            <Button mode="contained">
+            </ButtonLink>
+            <ButtonLink mode="contained">
                 ประวัติการถ่ายภาพ
-            </Button>
-            <Button mode="contained">
+            </ButtonLink>
+            <ButtonLink mode="contained">
                 รายการที่เสร็จสิ้น
-            </Button>
+            </ButtonLink>
         </Background>
         );
     }

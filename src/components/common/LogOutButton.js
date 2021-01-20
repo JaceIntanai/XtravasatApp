@@ -1,30 +1,24 @@
-import React from "react";
-import { StyleSheet } from 'react-native';
-import { Button as PaperButton } from 'react-native-paper';
-import { auth } from "../../services/firebase";
+import React from 'react';
+import { TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
 
-const LogOutButton = ({ children, ...props }) => (
-  <PaperButton 
-    style={styles.button} 
-    mode="contained" 
-    labelStyle={styles.text}
-    {...props}>
-    {children}
-  </PaperButton>
+const LogOutButton = ({goBack}) => (
+  <TouchableOpacity onPress={goBack} style={styles.container}>
+    <Image style={styles.image} source={require('../assets/logout.jpg')} />
+  </TouchableOpacity>
 );
 
 const styles = StyleSheet.create({
-  button: {
-    width: '100%',
-    marginVertical: 10,
-    // left:20,
-    // alignItems: "center",
+  container: {
+    marginTop: 100,
+    marginVertical : -20,
+    width: '30%',
+    left: 165,
   },
-  text: {
-    fontWeight: 'bold',
-    fontSize: 15,
-    lineHeight: 26,
+  image: {
+    width: 30,
+    height: 30,
   },
-})
+});
 
 export {LogOutButton};

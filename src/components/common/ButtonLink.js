@@ -3,7 +3,7 @@ import { StyleSheet} from 'react-native';
 import { Button as PaperButton } from 'react-native-paper';
 import { theme } from '../core/theme';
 
-const Button = ({ mode, style, children, ...props }) => (
+const ButtonLink = ({ mode, style, children, ...props }) => (
   <PaperButton
     style={[
       styles.button,
@@ -21,18 +21,19 @@ const Button = ({ mode, style, children, ...props }) => (
 const styles = StyleSheet.create({
   button: {
     width: '100%',
-    marginVertical: 10,
+    marginVertical: 25,
     backgroundColor: '#005daa',
-    borderRadius: 5,
-    height: 50,
-    // left:20,
-    // alignItems: "center",
+    borderRadius: 10,
+    height: 100,
+    width: 300,
   },
   text: {
+    marginVertical: 35,
+    alignSelf: 'center',
     fontWeight: 'bold',
-    fontSize: 15,
+    fontSize: 18,
     lineHeight: 26,
   },
 });
 
-export {Button};
+export {ButtonLink};

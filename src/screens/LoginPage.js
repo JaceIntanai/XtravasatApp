@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react';
-import { Logo, Button, Textinput, Background } from '../components/common'
+import { Logo, Button, Textinput, Background , Msg} from '../components/common'
 import { theme } from '../components/core/theme';
 
 import { auth, styles } from '../services';
@@ -22,8 +22,9 @@ class LoginPage extends Component {
         return (
             <Background>
                 <Logo />
+                <Msg> อีเมล </Msg>
                 <Textinput
-                    label="Email"
+                    placeholder={'อีเมล'}
                     returnKeyType="next"
                     value={this.state.email}
                     onChangeText={email => this.setState({ email })}
@@ -32,9 +33,9 @@ class LoginPage extends Component {
                     textContentType="emailAddress"
                     keyboardType="email-address"
                 />
-    
+                <Msg> รหัสผ่าน </Msg>
                 <Textinput
-                    label="Password"
+                    placeholder={'รหัสผ่าน'}
                     returnKeyType="done"
                     value={this.state.password}
                     onChangeText={password => this.setState({ password })}
@@ -45,7 +46,7 @@ class LoginPage extends Component {
                     mode="contained" 
                     onPress={this.onLoginPressed.bind(this)}
                 >
-                    Login
+                    เข้าสู่ระบบ
                 </Button>
             </Background>
         );

@@ -7,8 +7,8 @@ import {
 
 const Background = ({ children }) => (
   <ImageBackground
-    source={require('../assets/background_dot.png')}
-    resizeMode="repeat"
+    // source={require('../assets/background_dot.png')}
+    // resizeMode="repeat"
     style={styles.background}
   >
     <KeyboardAvoidingView style={styles.container} behavior="padding">
@@ -21,9 +21,10 @@ const styles = StyleSheet.create({
   background: {
     flex: 1,
     width: '100%',
+    backgroundColor:'#ffffff'
   },
   container: {
-    flex: 1,
+    flex: 0.85,
     padding: 20,
     width: '100%',
     maxWidth: 340,

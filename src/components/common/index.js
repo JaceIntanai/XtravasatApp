@@ -16,3 +16,5 @@ export * from './Textsame';
 export * from './Start';
 export * from './Spinner';
 export * from './LogOutButton';
+export * from './ButtonLink';
+export * from './Msg';

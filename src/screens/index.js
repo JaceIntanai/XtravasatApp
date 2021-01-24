@@ -9,3 +9,4 @@ export { default as ConfirmPage } from './ConfirmPage';
 export { default as LoadingPage } from './LoadingPage';
 export { default as DetailPage } from './DetailPage';
 export { default as LoadingScreen } from './LoadingScreen';
+export { default as SubPage } from './SubPage';

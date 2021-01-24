@@ -3,7 +3,7 @@ import { View, StyleSheet, Text, TextInput as Input } from 'react-native';
 // import { TextInput as Input } from 'react-native-paper';
 import { theme } from '../core/theme';
 
-const TextAge = ({ errorText, ...props }) => (
+const Textform4 = ({ errorText, ...props }) => (
   <View style={styles.container}>
     <Input
       style={styles.input}
@@ -18,9 +18,10 @@ const TextAge = ({ errorText, ...props }) => (
 
 const styles = StyleSheet.create({
   container: {
-    width: '60%',
+    width: '43%',
+    marginTop: 15,
     marginHorizontal: 5,
-    // marginVertical: 20,
+    marginVertical: 15,
   },
   input: {
     fontSize: 16,
@@ -31,7 +32,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     height: 50,
     color: 'black',
-    
   },
   error: {
     fontSize: 14,
@@ -41,4 +41,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export {TextAge};
+export {Textform4};

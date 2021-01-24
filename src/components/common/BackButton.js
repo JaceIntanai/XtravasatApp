@@ -15,6 +15,9 @@ const styles = StyleSheet.create({
     left: 10,
   },
   image: {
+    // position:'relative',
+    marginTop: 5,
+    marginLeft : 20,
     width: 30,
     height: 30,
   },

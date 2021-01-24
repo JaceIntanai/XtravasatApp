@@ -11,11 +11,10 @@ const Header = ({ children }) => (
 
 const styles = StyleSheet.create({
   container: {
-    // alignItems : 'center' ,
     marginVertical: 20,
   },
   header: {
-    fontSize: 26,
+    fontSize: 34,
     color: theme.colors.primary,
     fontWeight: 'bold',
     paddingVertical: 14,

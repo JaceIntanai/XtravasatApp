@@ -18,7 +18,9 @@ const Textform = ({ errorText, ...props }) => (
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%',
+    width: '97.5%',
+    marginTop: 15,
+    marginHorizontal: 5,
     marginVertical: 15,
   },
   input: {

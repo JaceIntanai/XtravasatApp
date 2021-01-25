@@ -3,7 +3,7 @@ import { StyleSheet} from 'react-native';
 import { Button as PaperButton } from 'react-native-paper';
 import { theme } from '../core/theme';
 
-const NextButton = ({ mode, style, children, ...props }) => (
+const Calendar = ({ mode, style, children, ...props }) => (
   <PaperButton
     style={[
       styles.button,
@@ -20,13 +20,13 @@ const NextButton = ({ mode, style, children, ...props }) => (
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#B6452C',
-    borderColor: '#B6452C',
-    borderRadius: 5,
-    height: 50,
-    marginVertical: 20,
-    width: '97%',
-    marginLeft : 5,
+    borderWidth: 1,
+    borderColor: '#6a6e78',
+    width: 250,
+    height: 40,
+    marginBottom: 15,
+    marginTop: 15,
+    marginLeft: 5,
   },
   text: {
     fontWeight: 'bold',
@@ -35,4 +35,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export {NextButton};
+export {Calendar};

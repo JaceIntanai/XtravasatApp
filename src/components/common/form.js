@@ -6,6 +6,7 @@ const form = StyleSheet.create({
     width: '115%',
     marginTop : 40,
     marginLeft : -10,
+    marginBottom : -100,
   }
 });
 

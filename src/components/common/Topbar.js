@@ -4,8 +4,8 @@ import { theme } from '../core/theme';
 
 const Topbar = ({ children }) => (
 <View style={styles.container}>
-  {children}
-  <Text style={styles.header}>ผู้ป่วยใหม่</Text>
+  {children[0]}
+  <Text style={styles.header}>{children[1]}</Text>
 </View>
 
 );

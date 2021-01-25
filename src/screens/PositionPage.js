@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Button, Background, Header, BackButton } from '../components/common'
-
+import { Button , Background , BackButton , Topbar , SubPosition , Position} from '../components/common'
+// import { Button } from 'react-native-elements';
 class PositionPage extends Component{
 
     state = {
@@ -8,7 +8,6 @@ class PositionPage extends Component{
     }
 
     async onClick(select){
-
         await this.setState({ position: select });
         this.props.navigation.navigate('cameraP', { image_position: this.state.position });
     };
@@ -17,11 +16,32 @@ class PositionPage extends Component{
     render(){
         return (
             <Background>
-                <BackButton 
-                    goBack={() => this.props.navigation.navigate('patient')}
-                />
-                <Header>ตำแหน่งที่ต้องการถ่าย</Header>
-                <Button
+                <Topbar>
+                    <BackButton 
+                        goBack={() => this.props.navigation.navigate('patient')}
+                    />
+                    ตำแหน่งที่ต้องการถ่าย
+                </Topbar>
+                <Position>
+                    มือซ้าย
+                    {/* <SubPosition>
+                        <Button
+                            mode="contained" 
+                            onPress={()=>this.onClick('Left Hand')}
+                        >
+                        มือซ้าย
+                        </Button>
+                    </SubPosition> */}
+                    {/* <SubPosition>
+                        <Button
+                            mode="contained" 
+                            onPress={()=>this.onClick('Left Hand')}
+                        >
+                            มือซ้าย
+                        </Button>
+                    </SubPosition> */}
+                </Position>
+                {/* <Button
                     mode="contained" 
                     onPress={()=>this.onClick('Left Hand')}
                 >
@@ -68,7 +88,7 @@ class PositionPage extends Component{
                     onPress={()=>this.onClick('Right Foot')}
                 >
                     เท้าขวา
-                </Button>
+                </Button> */}
             </Background>
         );
     }

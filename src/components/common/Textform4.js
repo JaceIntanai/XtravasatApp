@@ -10,6 +10,7 @@ const Textform4 = ({ errorText, ...props }) => (
       // selectionColor={theme.colors.primary}
       underlineColor="transparent"
       mode="outlined"
+      
       {...props}
     />
     {errorText ? <Text style={styles.error}>{errorText}</Text> : null}

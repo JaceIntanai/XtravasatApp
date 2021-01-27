@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { TouchableOpacity, StyleSheet, Image } from 'react-native';
-import { Background, BackButton, Header } from '../components/common'
+import { Background, BackButton, Header , Topbar ,CameraSet} from '../components/common'
 // import Camera from '../components/Camera';
 import ExpoCamera from '../components/ExpoCamera';
 
@@ -39,9 +39,15 @@ class CameraPage extends Component{
 
       return (
         <Background>
-            <Header>{this.state.position}</Header>
-            <BackButton goBack={() => this.props.navigation.navigate('position') } />
-            <ExpoCamera onCapture={this.picture} imgPosition={this.state.position} />
+            <Topbar>
+              <BackButton 
+                  goBack={() => this.props.navigation.navigate('position')}
+              />
+              {this.state.position}
+            </Topbar>
+            <CameraSet>
+              <ExpoCamera onCapture={this.picture} imgPosition={this.state.position} />
+            </CameraSet>
         </Background>
       ); 
   }

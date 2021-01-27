@@ -33,3 +33,4 @@ export * from './Codi';
 export * from './Calendar';
 export * from './SubPosition';
 export * from './Position';
+export * from './CameraSet';

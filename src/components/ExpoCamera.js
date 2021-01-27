@@ -112,7 +112,7 @@ class ExpoCamera extends Component {
         return <Text>No access to camera</Text>;
         } else {
             return (
-                <View style={{ flex: 1 }}>
+                <View style={styles.container}>
                     <Camera 
                         style={{ flex: 1 }} 
                         type={this.state.cameraType}  
@@ -137,6 +137,10 @@ class ExpoCamera extends Component {
 }
 
 const styles = StyleSheet.create({
+    container: {
+        marginTop: -20,
+        flex: 1,
+    },
     bottomBar: {
         //paddingTop: isIPhoneX ? 500 : 350,
         // paddingBottom: isIPhoneX ? 30 : 20,
@@ -144,16 +148,17 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         flex: 0.3,
         flexDirection: 'row',
+        marginTop: -100,
     },
     maskBar: {
         flex: 1,
         backgroundColor: 'transparent',
         alignItems: 'center',
+        // marginTop: 50,
     },
     mask: {
         height: Dimensions.get('window').height* 0.72,
         width: Dimensions.get('window').width,
-
     },
 });
 

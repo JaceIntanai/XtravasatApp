@@ -10,3 +10,7 @@ export { default as LoadingPage } from './LoadingPage';
 export { default as DetailPage } from './DetailPage';
 export { default as LoadingScreen } from './LoadingScreen';
 export { default as SubPage } from './SubPage';
+export { default as HistoryPage } from './HistoryPage';
+export { default as SuccessPage } from './SuccessPage';
+export { default as TracePage } from './TracePage';
+export { default as SelectPage } from './SelectPage';

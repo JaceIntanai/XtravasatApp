@@ -10,7 +10,7 @@ const LogOutButton = ({goBack}) => (
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 100,
+    marginTop: 120,
     marginVertical : -20,
     width: '30%',
     left: 165,

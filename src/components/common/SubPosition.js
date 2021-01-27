@@ -1,26 +1,40 @@
 import React, { memo } from 'react';
-import { StyleSheet, View} from 'react-native';
+import { StyleSheet, View , Dimensions , Text} from 'react-native';
 import { Button as PaperButton } from 'react-native-paper';
 // import { styles } from '../../services/style';
 import { theme } from '../core/theme';
 
-const SubPosition = ({ Children }) => (
-    <View style={styles.subContainer}>
-        <Text style={styles.text}>{Children}</Text>
-    </View>
+const SubPosition = ({ mode, style, children, ...props }) => (
+    <PaperButton
+    style={[
+      styles.button,
+      mode === 'outlined' && { backgroundColor: theme.colors.surface },
+      style,
+    ]}
+    labelStyle={styles.text}
+    mode={mode}
+    {...props}
+    >
+        {children}
+    </PaperButton>
 );
 
 const styles = StyleSheet.create({
-    subContainer: {
-        flexDirection: 'row',
-        justifyContent: 'flex-start',
-        marginLeft: 10,
-        marginRight: 10,
-        backgroundColor: '#F5F7F4',
+    button: {
+        borderColor: '#6a6e78',
+        borderWidth: 1,
+        width: Dimensions.get('window').width / 2 - 15,
+        height: Dimensions.get('window').height / 4 - 45,
+        backgroundColor: 'white',
+        margin: 5,
+        borderRadius: 5,
     },
-    text: {
-        fontSize: 40,
-        color: '#000000',
+    text:{
+        fontWeight: 'bold',
+        textAlign: 'center',
+        fontSize: 23,
+        marginTop: Dimensions.get('window').height / 16,
+        color: 'black',
     }
 });
 

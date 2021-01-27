@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button , Background , BackButton , Topbar , SubPosition , Position} from '../components/common'
+import { Button , Background , BackButton , Topbar , SubPosition , Position } from '../components/common'
 // import { Button } from 'react-native-elements';
 class PositionPage extends Component{
 
@@ -18,77 +18,60 @@ class PositionPage extends Component{
             <Background>
                 <Topbar>
                     <BackButton 
-                        goBack={() => this.props.navigation.navigate('patient')}
+                        goBack={() => this.props.navigation.navigate('sub')}
                     />
                     ตำแหน่งที่ต้องการถ่าย
                 </Topbar>
                 <Position>
-                    มือซ้าย
-                    {/* <SubPosition>
-                        <Button
-                            mode="contained" 
-                            onPress={()=>this.onClick('Left Hand')}
-                        >
+                    <SubPosition
+                        mode="contained" 
+                        onPress={()=>this.onClick('Left Hand')}
+                    >
                         มือซ้าย
-                        </Button>
-                    </SubPosition> */}
-                    {/* <SubPosition>
-                        <Button
-                            mode="contained" 
-                            onPress={()=>this.onClick('Left Hand')}
-                        >
-                            มือซ้าย
-                        </Button>
-                    </SubPosition> */}
+                    </SubPosition>
+                    <SubPosition
+                        mode="contained" 
+                        onPress={()=>this.onClick('Right Hand')}
+                    >
+                        มือขวา
+                    </SubPosition>
+                    <SubPosition
+                        mode="contained" 
+                        onPress={()=>this.onClick('Left Arm')}
+                    >
+                        แขนซ้าย
+                    </SubPosition>
+                    <SubPosition
+                        mode="contained" 
+                        onPress={()=>this.onClick('Right Arm')}
+                    >
+                        แขนขวา
+                    </SubPosition>
+                    <SubPosition
+                        mode="contained" 
+                        onPress={()=>this.onClick('Left Leg')}
+                    >
+                        ขาซ้าย
+                    </SubPosition>
+                    <SubPosition
+                        mode="contained" 
+                        onPress={()=>this.onClick('Right Leg')}
+                    >
+                        ขาขวา
+                    </SubPosition>
+                    <SubPosition
+                        mode="contained" 
+                        onPress={()=>this.onClick('Left Foot')}
+                    >
+                        เท้าซ้าย
+                    </SubPosition>
+                    <SubPosition
+                        mode="contained" 
+                        onPress={()=>this.onClick('Right Foot')}
+                    >
+                        เท้าขวา
+                    </SubPosition>
                 </Position>
-                {/* <Button
-                    mode="contained" 
-                    onPress={()=>this.onClick('Left Hand')}
-                >
-                    มือซ้าย
-                </Button>
-                <Button
-                    mode="contained" 
-                    onPress={()=>this.onClick('Right Hand')}
-                >
-                    มือขวา
-                </Button>
-                <Button
-                    mode="contained" 
-                    onPress={()=>this.onClick('Left Arm')}
-                >
-                    แขนซ้าย
-                </Button>
-                <Button
-                    mode="contained" 
-                    onPress={()=>this.onClick('Right Arm')}
-                >
-                    แขนขวา
-                </Button>
-                <Button
-                    mode="contained" 
-                    onPress={()=>this.onClick('Left Leg')}
-                >
-                    ขาซ้าย
-                </Button>
-                <Button
-                    mode="contained" 
-                    onPress={()=>this.onClick('Right Leg')}
-                >
-                    ขาขวา
-                </Button>
-                <Button
-                    mode="contained" 
-                    onPress={()=>this.onClick('Left Foot')}
-                >
-                    เท้าซ้าย
-                </Button>
-                <Button
-                    mode="contained" 
-                    onPress={()=>this.onClick('Right Foot')}
-                >
-                    เท้าขวา
-                </Button> */}
             </Background>
         );
     }

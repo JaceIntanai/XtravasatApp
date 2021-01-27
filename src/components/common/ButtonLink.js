@@ -20,8 +20,7 @@ const ButtonLink = ({ mode, style, children, ...props }) => (
 
 const styles = StyleSheet.create({
   button: {
-    width: '100%',
-    marginVertical: 25,
+    marginVertical: 15,
     backgroundColor: '#005daa',
     borderRadius: 10,
     height: 100,

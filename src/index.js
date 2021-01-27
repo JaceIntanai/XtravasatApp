@@ -12,6 +12,10 @@ import {
     DetailPage,
     LoadingScreen,
     SubPage,
+    HistoryPage,
+    SuccessPage,
+    TracePage,
+    SelectPage,
 } from './screens';
 
 const Router = createStackNavigator(
@@ -26,6 +30,10 @@ const Router = createStackNavigator(
     detail: DetailPage,
     start: LoadingScreen,
     sub: SubPage,
+    history: HistoryPage,
+    success: SuccessPage,
+    trace: TracePage,
+    select: SelectPage,
   },
   {
     initialRouteName: 'start',

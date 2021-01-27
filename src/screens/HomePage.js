@@ -13,6 +13,17 @@ class HomePage extends Component{
         this.props.navigation.navigate('patient')
     }
 
+    tracePatient(){
+        this.props.navigation.navigate('trace')
+    }
+    historyPatient(){
+        this.props.navigation.navigate('history')
+    }
+
+    successPatient(){
+        this.props.navigation.navigate('success')
+    }
+
     render(){
         return (
         <Background>
@@ -27,13 +38,19 @@ class HomePage extends Component{
             >
                 ผู้ป่วยใหม่
             </ButtonLink>
-            <ButtonLink mode="contained">
+            <ButtonLink mode="contained"
+                onPress={() => this.tracePatient()}
+            >
                 ติดตามประเมินอาการ
             </ButtonLink>
-            <ButtonLink mode="contained">
+            <ButtonLink mode="contained"
+                onPress={() => this.historyPatient()}
+            >
                 ประวัติการถ่ายภาพ
             </ButtonLink>
-            <ButtonLink mode="contained">
+            <ButtonLink mode="contained"
+                onPress={() => this.successPatient()}
+            >
                 รายการที่เสร็จสิ้น
             </ButtonLink>
         </Background>

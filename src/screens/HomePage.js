@@ -23,7 +23,9 @@ class HomePage extends Component{
     successPatient(){
         this.props.navigation.navigate('success')
     }
-
+    recom(){
+        this.props.navigation.navigate('recom')
+    }
     render(){
         return (
         <Background>
@@ -52,6 +54,11 @@ class HomePage extends Component{
                 onPress={() => this.successPatient()}
             >
                 รายการที่เสร็จสิ้น
+            </ButtonLink>
+            <ButtonLink mode="contained"
+                onPress={() => this.recom()}
+            >
+                recom
             </ButtonLink>
         </Background>
         );

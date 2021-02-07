@@ -16,6 +16,7 @@ import {
     SuccessPage,
     TracePage,
     SelectPage,
+    RecommentPage,
 } from './screens';
 
 const Router = createStackNavigator(
@@ -34,6 +35,7 @@ const Router = createStackNavigator(
     success: SuccessPage,
     trace: TracePage,
     select: SelectPage,
+    recom: RecommentPage,
   },
   {
     initialRouteName: 'start',

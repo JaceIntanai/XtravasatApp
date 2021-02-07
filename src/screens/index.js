@@ -14,3 +14,4 @@ export { default as HistoryPage } from './HistoryPage';
 export { default as SuccessPage } from './SuccessPage';
 export { default as TracePage } from './TracePage';
 export { default as SelectPage } from './SelectPage';
+export { default as RecommentPage} from './RecommentPage';

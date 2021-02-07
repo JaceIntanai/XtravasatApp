@@ -1,17 +1,19 @@
-import React from 'react';
-import { Logo, Button, Background, Header , Topbar , BackButton} from '../components/common'
+import React, { Component } from 'react';
+import {Background , Topbar , BackButton} from '../components/common'
 
-const TracePage = ({ navigation }) =>{
-    return (
-        <Background>
-            <Topbar>
-                <BackButton 
-                    goBack={() => this.props.navigation.navigate('home')}
-                />
-                ติดตามประเมินอาการ
-            </Topbar>
-        </Background>
-    );
+class TracePage extends Component{
+    render(){
+        return (
+            <Background>
+                <Topbar>
+                    <BackButton 
+                        goBack={() => this.props.navigation.navigate('home')}
+                    />
+                    ติดตามประเมินอาการ
+                </Topbar>
+            </Background>
+        );
+    }
 }
 
 

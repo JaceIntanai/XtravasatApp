@@ -16,6 +16,7 @@ class HomePage extends Component{
     tracePatient(){
         this.props.navigation.navigate('trace')
     }
+    
     historyPatient(){
         this.props.navigation.navigate('history')
     }

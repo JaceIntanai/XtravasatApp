@@ -7,7 +7,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import { drugdata , alertdata } from '../components/data';
 import { ScrollView } from 'react-native';
 import { auth } from '../services';
-import { Dropdown } from 'react-native-material-dropdown';
+// import { Dropdown } from 'react-native-material-dropdown';
 import SectionedMultiSelect from 'react-native-sectioned-multi-select';
 import DateTimePicker from "react-native-modal-datetime-picker";
 
@@ -148,14 +148,14 @@ class PatientPage extends Component{
                     >
                     </Calendar>
                     <Msg> แจ้งเตือนสำหรับการถ่ายครั้งต่อไป * </Msg>
-                    <Dropdown 
+                    {/* <Dropdown 
                         data={ alertdata }
                         label={'โปรดระบุ...'}
                         dropdownOffset={{ top: 10 }}
                         value={this.state.predict}
                         onChangeText={predict => this.setState({ predict })}
                         containerStyle={dd3.dropdown}
-                    />
+                    /> */}
                     <NextButton 
                         mode="contained" 
                         onPress={() => this.confirmClick()}

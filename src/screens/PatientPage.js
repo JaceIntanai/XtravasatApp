@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { Background, BackButton, Textform, TextAge , Msg , Topbar , Dropdown as dd , Dropdown2 as dd2 , Subheader} from '../components/common'
 import { form , Subinput , NextButton , Codi } from '../components/common';
 import { codiseasedata , genderdata , welfaredata , predictdata } from '../components/data';
-import { ScrollView } from 'react-native';
+import { ScrollView, Picker } from 'react-native';
 import { auth } from '../services';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { Dropdown } from 'react-native-material-dropdown';
+// import { Dropdown } from 'react-native-material-dropdown';
 import SectionedMultiSelect from 'react-native-sectioned-multi-select';
 class PatientPage extends Component{
     state = {
@@ -53,34 +53,46 @@ class PatientPage extends Component{
                         onChangeText={age => this.setState({ age })}
                         />
                         ปี 
-                        <Dropdown 
+                        {/* <Dropdown 
                             data={ genderdata }
                             dropdownOffset={{ top: 10 }}
                             value={this.state.gender}
                             onChangeText={gender => this.setState({ gender })}
                             containerStyle={dd.dropdown}
-                        />
+                        /> */}
+                        {/* <Picker
+                            selectedValue={this.state.gender}
+                            style={{height: 50, width: 100}}
+                            onValueChange={(itemValue, itemIndex) =>
+                                this.setState({gender: itemValue})
+                            }>
+                            <Picker.Item label="Male" value="male" />
+                            <Picker.Item label="Female" value="female" />
+                        </Picker> */}
                     </Subinput>
 
                     
                         
                     <Msg> สิทธิการรักษา * </Msg>
-                    <Dropdown 
+                    {/* <Dropdown 
                         data={ welfaredata }
                         dropdownOffset={{ top: 10 }}
                         value={this.state.welfare}
                         onChangeText={welfare => this.setState({ welfare })}
                         containerStyle={dd2.dropdown}
-                    />
+                    /> */}
 
                     <Msg> การวินิจฉัยโรค * </Msg>
-                    <Dropdown 
-                        data={ predictdata }
-                        dropdownOffset={{ top: 10 }}
-                        value={this.state.predict}
-                        onChangeText={predict => this.setState({ predict })}
-                        containerStyle={dd2.dropdown}
-                    />
+                    {/* <Picker
+                        selectedValue={this.state.language}
+                        style={{height: 50, width: 100}}
+                        onValueChange={(itemValue, itemIndex) =>
+                            this.setState({language: itemValue})
+                        }>
+                        <Picker.Item label="Java" value="java" />
+                        <Picker.Item label="JavaScript" value="js" />
+                    </Picker> */}
+
 
                     <Msg> โรคร่วม (Co mobility) * </Msg>
                     <SectionedMultiSelect

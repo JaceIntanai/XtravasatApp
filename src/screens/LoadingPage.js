@@ -6,7 +6,7 @@ class LoadingPage extends Component{
         return (
             <Background>
                 <Header>โหลดจ้า</Header>
-                <Button onPress={()=>navigation.navigate('detail')}>ยืนยัน</Button>
+                <Button onPress={()=>this.props.navigation.navigate('detail')}>ยืนยัน</Button>
             </Background>
         );
     }

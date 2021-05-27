@@ -8,7 +8,7 @@ class DetailPage extends Component{
                 <Header>ผลลัพธ์</Header>
                 <Logo />
                 <Paragraph>Mild</Paragraph>
-                <Button onPress={()=>navigation.navigate('home')}>
+                <Button onPress={()=>this.props.navigation.navigate('home')}>
                     ยืนยัน
                 </Button>
             </Background>

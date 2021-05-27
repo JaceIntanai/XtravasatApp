@@ -7,17 +7,19 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import { drugdata , alertdata } from '../components/data';
 import { ScrollView } from 'react-native';
 import { auth } from '../services';
-import { Dropdown } from 'react-native-material-dropdown';
+// import { Dropdown } from 'react-native-material-dropdown';
+import { Dropdown } from 'react-native-material-dropdown-v2-fixed';
 import SectionedMultiSelect from 'react-native-sectioned-multi-select';
 import DateTimePicker from "react-native-modal-datetime-picker";
 
 class PatientPage extends Component{
+
     state = {
         drug: '',
         mg: '',
         ml: '',
         mll: '',
-        predict: '',
+        time: '',
         codisease: '',
         fPickerVisible: false,
     }
@@ -37,7 +39,22 @@ class PatientPage extends Component{
 
 
     confirmClick(){
-        this.props.navigation.navigate('position');
+        this.props.navigation.navigate('position', {
+            
+            Pnumber: this.props.navigation.state.params.Pn,
+            Page: this.props.navigation.state.params.Pa,
+            Pgen: this.props.navigation.state.params.Pg,
+            Pwel: this.props.navigation.state.params.Pw,
+            Ppre: this.props.navigation.state.params.Pp,
+            Pco: this.props.navigation.state.params.Pc,
+            Pdrug: this.state.drug,
+            Pmg: this.state.mg,
+            Pml: this.state.ml,
+            Pmll: this.state.mll,
+            Ptime: this.state.time,
+            Pf: this.state.fPickerVisible,
+            
+        });
     }
 
     render(){
@@ -152,8 +169,8 @@ class PatientPage extends Component{
                         data={ alertdata }
                         label={'โปรดระบุ...'}
                         dropdownOffset={{ top: 10 }}
-                        value={this.state.predict}
-                        onChangeText={predict => this.setState({ predict })}
+                        value={this.state.time}
+                        onChangeText={time => this.setState({ time })}
                         containerStyle={dd3.dropdown}
                     />
                     <NextButton 

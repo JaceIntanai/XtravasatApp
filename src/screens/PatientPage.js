@@ -5,7 +5,8 @@ import { codiseasedata , genderdata , welfaredata , predictdata } from '../compo
 import { ScrollView } from 'react-native';
 import { auth } from '../services';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { Dropdown } from 'react-native-material-dropdown';
+// import { Dropdown } from 'react-native-material-dropdown';
+import { Dropdown } from 'react-native-material-dropdown-v2-fixed';
 import SectionedMultiSelect from 'react-native-sectioned-multi-select';
 class PatientPage extends Component{
     state = {
@@ -18,7 +19,14 @@ class PatientPage extends Component{
     }
 
     confirmClick(){
-        this.props.navigation.navigate('sub');
+        this.props.navigation.navigate('sub', {
+            Pn: this.state.number,
+            Pa: this.state.age,
+            Pg: this.state.gender,
+            Pw: this.state.welfare,
+            Pp: this.state.predict,
+            Pc: this.state.codisease
+        });
     }
 
     render(){

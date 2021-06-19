@@ -3,7 +3,7 @@ import { Background, BackButton, Textform, TextAge , Msg , Topbar , Dropdown as 
 import { form , Subinput , NextButton , Codi } from '../components/common';
 import { codiseasedata , genderdata , welfaredata , predictdata } from '../components/data';
 import { ScrollView, Picker } from 'react-native';
-import { auth } from '../services';
+import { auth, db } from '../services';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 // import { Dropdown } from 'react-native-material-dropdown';
 import { Dropdown } from 'react-native-material-dropdown-v2-fixed';
@@ -19,6 +19,7 @@ class PatientPage extends Component{
     }
 
     confirmClick(){
+        // db.setData(this.state.number)
         this.props.navigation.navigate('sub', {
             Pn: this.state.number,
             Pa: this.state.age,

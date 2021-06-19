@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 // import { Icon as ic } from 'react-native-elements';
 import { drugdata , alertdata } from '../components/data';
 import { ScrollView } from 'react-native';
-import { auth } from '../services';
+import { auth, db } from '../services';
 // import { Dropdown } from 'react-native-material-dropdown';
 import { Dropdown } from 'react-native-material-dropdown-v2-fixed';
 import SectionedMultiSelect from 'react-native-sectioned-multi-select';
@@ -20,7 +20,6 @@ class PatientPage extends Component{
         ml: '',
         mll: '',
         time: '',
-        codisease: '',
         fPickerVisible: false,
     }
 
@@ -39,20 +38,31 @@ class PatientPage extends Component{
 
 
     confirmClick(){
+        // db.updateData(this.props.navigation.state.params.Pn,
+        //     this.props.navigation.state.params.Pn,
+        //     this.props.navigation.state.params.Pa,
+        //     this.props.navigation.state.params.Pg,
+        //     this.props.navigation.state.params.Pw,
+        //     this.props.navigation.state.params.Pp,
+        //     this.props.navigation.state.params.Pc,
+        //     this.state.drug,
+        //     this.state.mg,
+        //     this.state.ml,
+        //     this.state.mll,
+        //     this.state.time)
         this.props.navigation.navigate('position', {
             
             Pnumber: this.props.navigation.state.params.Pn,
-            Page: this.props.navigation.state.params.Pa,
-            Pgen: this.props.navigation.state.params.Pg,
-            Pwel: this.props.navigation.state.params.Pw,
-            Ppre: this.props.navigation.state.params.Pp,
-            Pco: this.props.navigation.state.params.Pc,
-            Pdrug: this.state.drug,
-            Pmg: this.state.mg,
-            Pml: this.state.ml,
-            Pmll: this.state.mll,
-            Ptime: this.state.time,
-            Pf: this.state.fPickerVisible,
+            // Page: this.props.navigation.state.params.Pa,
+            // Pgen: this.props.navigation.state.params.Pg,
+            // Pwel: this.props.navigation.state.params.Pw,
+            // Ppre: this.props.navigation.state.params.Pp,
+            // Pco: this.props.navigation.state.params.Pc,
+            // Pdrug: this.state.drug,
+            // Pmg: this.state.mg,
+            // Pml: this.state.ml,
+            // Pmll: this.state.mll,
+            // Ptime: this.state.time,
             
         });
     }

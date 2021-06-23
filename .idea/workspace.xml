@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="409fc783-9d68-453d-836f-b390b1a674df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ExpoCamera.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ExpoCamera.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/BackButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/BackButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Background.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Background.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/CameraSet.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/CameraSet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Dropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Dropdown.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Dropdown2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Dropdown2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Dropdown3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Dropdown3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/LogOutButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/LogOutButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Paragraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Paragraph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Position.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Position.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/SubPosition.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/SubPosition.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Subheader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Subheader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Subinput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Subinput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Topbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Topbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/DetailPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/DetailPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/PatientPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/PatientPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/SubPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/SubPage.js" afterDir="false" />
-    </list>
+    <list default="true" id="409fc783-9d68-453d-836f-b390b1a674df" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

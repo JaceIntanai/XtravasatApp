@@ -88,7 +88,7 @@ class PatientPage extends Component{
                         showDropDowns={true}
                         readOnlyHeadings={true}
                         onSelectedItemsChange={drugs => this.setState({drugs})}
-                        // selectedItems={this.cor.value}
+                        selectedItems={this.state.drugs}
                         expandDropDowns={true}
                         searchPlaceholderText="Search"
                         colors={{ subText: '#000000' }}
@@ -177,11 +177,13 @@ class PatientPage extends Component{
                     <Msg> แจ้งเตือนสำหรับการถ่ายครั้งต่อไป * </Msg>
                     <Dropdown 
                         data={ alertdata }
+                        underlineColor="transparent"
                         label={'โปรดระบุ...'}
                         dropdownOffset={{ top: 10 }}
                         value={this.state.time}
                         onChangeText={time => this.setState({ time })}
-                        containerStyle={dd3.dropdown}
+                        // containerStyle={dd3.dropdown}
+                        style={dd3.dropdown}
                     />
                     <NextButton 
                         mode="contained" 

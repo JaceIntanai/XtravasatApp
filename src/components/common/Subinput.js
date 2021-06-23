@@ -8,7 +8,7 @@ const Subinput = ({ children }) => (
         {children[0]}
         <Text style={styles.subheader}>{children[1]}</Text>
     </View>
-    <View style={{ flex: 0.5 }}>
+    <View style={{ flex: 0.5, }}>
         {children[2]}
     </View>
 </View>
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     },
     subcontainer: {
         flexDirection: 'row', 
-        flex: 0.5
+        flex: 0.5,
     },
     subheader: {
         fontSize: 16,
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         color: '#005daa',
         marginTop: 15,
         marginLeft: 10, 
-        fontWeight: 'normal' 
+        fontWeight: 'normal' ,
     },
 });
 export {Subinput};

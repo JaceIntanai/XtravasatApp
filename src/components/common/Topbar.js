@@ -13,17 +13,18 @@ const Topbar = ({ children }) => (
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#005daa',
-    width : 400,
-    height : 120,
+    width : '120%',
+    height : 130,
     alignItems: 'center',
-    paddingHorizontal: 10,
-    paddingBottom: 10,
-    marginVertical: -20,
+    justifyContent: 'center',
+    // paddingHorizontal: 10,
+    paddingTop: 10,
+    // marginVertical: -20,
   },
   header: {
     fontSize: 18,
     color: 'white',
-    marginTop: 60,
+    // marginTop: 60,
     fontWeight: 'bold',
   },
   

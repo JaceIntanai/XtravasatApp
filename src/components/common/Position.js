@@ -34,8 +34,8 @@ const styles = StyleSheet.create({
     subContainer: {
         flexDirection: 'row',
         justifyContent: 'flex-start',
-        marginLeft: 10,
-        marginRight: 10,
+        // marginLeft: 10,
+        // marginRight: 10,
         backgroundColor: '#F5F7F4',
     },
 });

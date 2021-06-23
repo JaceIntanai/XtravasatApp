@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { TouchableOpacity, Image, StyleSheet , View} from 'react-native';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 
 const LogOutButton = ({goBack}) => (
@@ -10,15 +10,18 @@ const LogOutButton = ({goBack}) => (
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 120,
+    // marginTop: '10%',
     marginVertical : -20,
-    width: '30%',
-    left: 165,
+    // width: '30%',
+    alignSelf: 'flex-end',
+    // left: 165,
   },
   image: {
+    marginRight: 10,
     width: 30,
     height: 30,
   },
+  
 });
 
 export {LogOutButton};

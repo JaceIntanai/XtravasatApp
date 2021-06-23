@@ -8,7 +8,8 @@ const CameraSet = ({ children }) => (
   );
 const styles = StyleSheet.create({
     container : {
-        marginTop: 50,
+        paddingTop: 20, 
+        flex: 2,
     },
 });
 

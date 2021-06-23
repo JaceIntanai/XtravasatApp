@@ -4,8 +4,8 @@ import { theme } from '../core/theme';
 
 const Subheader = ( ) => (
 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-    <Text style={[styles.subheader, { flex: 0.5 }]}>อายุ *</Text>
-    <Text style={[styles.subheader, { flex: 0.5 }]}>เพศ *</Text>
+    <Text style={[styles.subheader, { flex: 0.5 }]}> อายุ *</Text>
+    <Text style={[styles.subheader, { flex: 0.5 }]}> เพศ *</Text>
     {/* <Text style={[styles.subheader, { flex: 0.5 }]}>{children2} *</Text> */}
 </View>
 );

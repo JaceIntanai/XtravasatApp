@@ -1,6 +1,7 @@
 import React, { Component} from 'react';
 import { Logo, Button, Background, LogOutButton , ButtonLink , Header} from '../components/common'
 import { auth } from '../services';
+import { View } from 'react-native';
 
 class HomePage extends Component{
 
@@ -29,13 +30,15 @@ class HomePage extends Component{
     }
     render(){
         return (
-        <Background>
+        <Background style={{width: 440}}>
             <LogOutButton 
                     goBack={() => this.clickLogout()}
             />
             
             <Header> XtraVasat </Header>
-            
+            <View style={{flexDirection: 'row'}}>
+                <View style={{backgroundColor: '#005daa', height: 1, flex: 1, }} />
+            </View>
             <ButtonLink mode="contained" 
                 onPress={() => this.newPatient()}
             >

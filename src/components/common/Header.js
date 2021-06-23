@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
     color: theme.colors.primary,
     fontWeight: 'bold',
     paddingVertical: 10,
+    borderColor: '#005daa'
   },
   
 });

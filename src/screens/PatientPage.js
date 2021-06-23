@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Background, BackButton, Textform, TextAge , Msg , Topbar , Dropdown as dd , Dropdown2 as dd2 , Subheader} from '../components/common'
 import { form , Subinput , NextButton , Codi } from '../components/common';
 import { codiseasedata , genderdata , welfaredata , predictdata } from '../components/data';
-import { ScrollView, Picker } from 'react-native';
+import { ScrollView, Picker, View } from 'react-native';
 import { auth, db } from '../services';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 // import { Dropdown } from 'react-native-material-dropdown';
@@ -62,22 +62,25 @@ class PatientPage extends Component{
                         onChangeText={age => this.setState({ age })}
                         />
                         ปี 
-                        <Dropdown 
+                        <Dropdown
                             data={ genderdata }
+                            underlineColor='transparent'
                             dropdownOffset={{ top: 10 }}
                             value={this.state.gender}
                             onChangeText={gender => this.setState({ gender })}
-                            containerStyle={dd.dropdown}
+                            // containerStyle={dd.dropdown}
+                            style={dd.dropdown}
                         />
-                        <Picker
+                        {/* <Picker
                             selectedValue={this.state.gender}
-                            style={{height: 50, width: 100}}
+                            style={{height: 50, width: '100%'}}
                             onValueChange={(itemValue, itemIndex) =>
                                 this.setState({gender: itemValue})
                             }>
                             <Picker.Item label="Male" value="male" />
                             <Picker.Item label="Female" value="female" />
-                        </Picker>
+                        </Picker> */}
+                        
                     </Subinput>
 
                     
@@ -85,14 +88,25 @@ class PatientPage extends Component{
                     <Msg> สิทธิการรักษา * </Msg>
                     <Dropdown 
                         data={ welfaredata }
+                        underlineColor='transparent'
                         dropdownOffset={{ top: 10 }}
                         value={this.state.welfare}
                         onChangeText={welfare => this.setState({ welfare })}
-                        containerStyle={dd2.dropdown}
+                        // containerStyle={dd2.dropdown}
+                        style={dd2.dropdown}
                     />
 
                     <Msg> การวินิจฉัยโรค * </Msg>
-                    <Picker
+                    <Dropdown 
+                            data={ predictdata }
+                            underlineColor='transparent'
+                            dropdownOffset={{ top: 10 }}
+                            value={this.state.predict}
+                            onChangeText={predict => this.setState({ predict })}
+                            // containerStyle={dd2.dropdown}
+                            style={dd2.dropdown}
+                        />
+                    {/* <Picker
                         selectedValue={this.state.language}
                         style={{height: 50, width: 100}}
                         onValueChange={(itemValue, itemIndex) =>
@@ -100,7 +114,7 @@ class PatientPage extends Component{
                         }>
                         <Picker.Item label="Java" value="java" />
                         <Picker.Item label="JavaScript" value="js" />
-                    </Picker>
+                    </Picker> */}
 
 
                     <Msg> โรคร่วม (Co mobility) * </Msg>
@@ -113,7 +127,7 @@ class PatientPage extends Component{
                         showDropDowns={true}
                         readOnlyHeadings={true}
                         onSelectedItemsChange={codisease => this.setState({codisease})}
-                        // selectedItems={this.cor.value}
+                        selectedItems={this.state.codisease}
                         expandDropDowns={true}
                         searchPlaceholderText="Search"
                         colors={{ subText: '#000000' }}
@@ -125,6 +139,7 @@ class PatientPage extends Component{
                     >
                         ถัดไป
                     </NextButton>
+
                 </ScrollView>
             </Background>
         );

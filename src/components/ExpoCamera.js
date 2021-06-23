@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         flex: 0.3,
         flexDirection: 'row',
-        marginTop: -100,
+        // marginTop: 100,
     },
     maskBar: {
         flex: 1,

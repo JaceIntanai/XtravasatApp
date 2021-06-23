@@ -20,17 +20,21 @@ const Background = ({ children }) => (
 const styles = StyleSheet.create({
   background: {
     flex: 1,
-    width: '100%',
-    backgroundColor:'#ffffff'
+    // width: '100%',
+    backgroundColor:'#ffffff',
+    // minWidth: 340,
   },
   container: {
-    flex: 0.85,
-    padding: 20,
+    // flex: 0.85,
+    paddingHorizontal: 20,
     width: '100%',
-    maxWidth: 340,
+    height: '100%',
+    maxWidth: 440,
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'center',
+    // android:windowSoftInputMode="adjustPan",
+
   },
 });
 

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="409fc783-9d68-453d-836f-b390b1a674df" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ExpoCamera.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ExpoCamera.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/BackButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/BackButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Background.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/CameraSet.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/CameraSet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Dropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Dropdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Dropdown2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Dropdown2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Dropdown3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Dropdown3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/LogOutButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/LogOutButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Paragraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Paragraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Position.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Position.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/SubPosition.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/SubPosition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Subheader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Subheader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Subinput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Subinput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Topbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Topbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/DetailPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/DetailPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/HomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/PatientPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/PatientPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/SubPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/SubPage.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1uEZfvYIirN6Huor9NMAcxW5twZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="expo start" />
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="409fc783-9d68-453d-836f-b390b1a674df" name="Default Changelist" comment="" />
+      <created>1624232815697</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624232815697</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1624444067928">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1624444067928" />
+    <state x="93" y="93" width="1350" height="638" key="AVDManager" timestamp="1624236930293">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="AVDManager/0.0.1536.824@0.0.1536.824" timestamp="1624236930293" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1624237176400">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1624237176400" />
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1624236544647">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1624236544647" />
+  </component>
+</project>

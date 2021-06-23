@@ -28,13 +28,17 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         margin: 5,
         borderRadius: 5,
+        justifyContent: 'center',
+        
     },
     text:{
         fontWeight: 'bold',
-        textAlign: 'center',
+        // textAlign: 'center',
         fontSize: 23,
-        marginTop: Dimensions.get('window').height / 16,
+        // marginTop: Dimensions.get('window').height / 16,
+        justifyContent: 'center',
         color: 'black',
+        paddingVertical: 50,
     }
 });
 

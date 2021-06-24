@@ -5,15 +5,26 @@ import { auth } from '../services/firebase';
 
 class LoadingScreen extends Component{
 
+    state = {
+        uID: ''
+    }
+
     componentDidMount(){
         this.checkIfLoggedIn();
     }
 
     checkIfLoggedIn = () => {
         auth.onAuthStateChanged(function(user){
-            console.log(user);
+            
+            
             if(user){
-                this.props.navigation.navigate('home');
+                // console.log("User here -------------------------------")
+                // console.log(user.uid);
+                this.state.uID = user.uid
+                // console.log(this.state.uID)
+                this.props.navigation.navigate('home',{
+                    uID: this.state.uID
+                });
             }
             else{
                 this.props.navigation.navigate('login');

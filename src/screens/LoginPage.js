@@ -7,7 +7,11 @@ import { auth, styles } from '../services';
 
 class LoginPage extends Component {
 
-    state = { email: '', password: '', error: 'Login Failed!' };
+    state = { 
+        email: '', 
+        password: '', 
+        error: 'Login Failed!' 
+    };
 
     onLoginPressed() {
         const {email , password} = this.state;

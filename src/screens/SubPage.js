@@ -15,6 +15,7 @@ import DateTimePicker from "react-native-modal-datetime-picker";
 class PatientPage extends Component{
 
     state = {
+        uid: this.props.navigation.state.params.uID,
         drug: '',
         mg: '',
         ml: '',
@@ -38,32 +39,22 @@ class PatientPage extends Component{
 
 
     confirmClick(){
-        // db.updateData(this.props.navigation.state.params.Pn,
-        //     this.props.navigation.state.params.Pn,
-        //     this.props.navigation.state.params.Pa,
-        //     this.props.navigation.state.params.Pg,
-        //     this.props.navigation.state.params.Pw,
-        //     this.props.navigation.state.params.Pp,
-        //     this.props.navigation.state.params.Pc,
-        //     this.state.drug,
-        //     this.state.mg,
-        //     this.state.ml,
-        //     this.state.mll,
-        //     this.state.time)
+        db.setData(this.state.uid, this.props.navigation.state.params.Pn)
+        db.updateData(this.state.uid, this.props.navigation.state.params.Pn,
+            this.props.navigation.state.params.Pn,
+            this.props.navigation.state.params.Pa,
+            this.props.navigation.state.params.Pg,
+            this.props.navigation.state.params.Pw,
+            this.props.navigation.state.params.Pp,
+            this.props.navigation.state.params.Pc,
+            this.state.drug,
+            this.state.mg,
+            this.state.ml,
+            this.state.mll,
+            this.state.time)
         this.props.navigation.navigate('position', {
-            
-            Pnumber: this.props.navigation.state.params.Pn,
-            // Page: this.props.navigation.state.params.Pa,
-            // Pgen: this.props.navigation.state.params.Pg,
-            // Pwel: this.props.navigation.state.params.Pw,
-            // Ppre: this.props.navigation.state.params.Pp,
-            // Pco: this.props.navigation.state.params.Pc,
-            // Pdrug: this.state.drug,
-            // Pmg: this.state.mg,
-            // Pml: this.state.ml,
-            // Pmll: this.state.mll,
-            // Ptime: this.state.time,
-            
+            uID: this.state.uid,
+            number: this.props.navigation.state.params.Pn,        
         });
     }
 
@@ -76,7 +67,7 @@ class PatientPage extends Component{
                     />
                     ผู้ป่วยใหม่
                 </Topbar>
-                <ScrollView style={form.form}>
+                <ScrollView >
 
                     <Msg> ยา * </Msg>
                     <SectionedMultiSelect

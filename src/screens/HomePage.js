@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
-import { Logo, Button, Background, LogOutButton , ButtonLink , Header} from '../components/common'
+import { Logo, Button, Background, ButtonOut , ButtonLink , Header, Topbar, form} from '../components/common'
 import { auth } from '../services';
-import { View } from 'react-native';
+import { View, ScrollView } from 'react-native';
 
 class HomePage extends Component{
 
@@ -11,7 +11,9 @@ class HomePage extends Component{
     }
 
     newPatient(){
-        this.props.navigation.navigate('patient')
+        this.props.navigation.navigate('patient',{
+            uID : this.props.navigation.state.params.uID
+        })
     }
 
     tracePatient(){
@@ -19,7 +21,9 @@ class HomePage extends Component{
     }
     
     historyPatient(){
-        this.props.navigation.navigate('history')
+        this.props.navigation.navigate('history',{
+            uID : this.props.navigation.state.params.uID
+        })
     }
 
     successPatient(){
@@ -30,40 +34,42 @@ class HomePage extends Component{
     }
     render(){
         return (
-        <Background style={{width: 440}}>
-            <LogOutButton 
-                    goBack={() => this.clickLogout()}
-            />
-            
+        <Background>
             <Header> XtraVasat </Header>
+            
             <View style={{flexDirection: 'row'}}>
                 <View style={{backgroundColor: '#005daa', height: 1, flex: 1, }} />
             </View>
-            <ButtonLink mode="contained" 
-                onPress={() => this.newPatient()}
-            >
-                ผู้ป่วยใหม่
-            </ButtonLink>
-            <ButtonLink mode="contained"
-                onPress={() => this.tracePatient()}
-            >
-                ติดตามประเมินอาการ
-            </ButtonLink>
-            <ButtonLink mode="contained"
-                onPress={() => this.historyPatient()}
-            >
-                ประวัติการถ่ายภาพ
-            </ButtonLink>
-            <ButtonLink mode="contained"
-                onPress={() => this.successPatient()}
-            >
-                รายการที่เสร็จสิ้น
-            </ButtonLink>
-            <ButtonLink mode="contained"
-                onPress={() => this.recom()}
-            >
-                recom
-            </ButtonLink>
+            <ScrollView>
+
+                <ButtonLink mode="contained" 
+                    onPress={() => this.newPatient()}
+                >
+                    ผู้ป่วยใหม่
+                </ButtonLink>
+                <ButtonLink mode="contained"
+                    onPress={() => this.tracePatient()}
+                >
+                    ติดตามประเมินอาการ
+                </ButtonLink>
+                <ButtonLink mode="contained"
+                    onPress={() => this.historyPatient()}
+                >
+                    ประวัติการถ่ายภาพ
+                </ButtonLink>
+                <ButtonLink mode="contained"
+                    onPress={() => this.successPatient()}
+                >
+                    รายการที่เสร็จสิ้น
+                </ButtonLink>
+
+                <ButtonOut mode="contained"
+                    onPress={() => this.clickLogout()}
+                >
+                    ออกจากระบบ
+                </ButtonOut>
+                            
+            </ScrollView>
         </Background>
         );
     }

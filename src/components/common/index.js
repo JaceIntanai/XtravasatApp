@@ -39,3 +39,5 @@ export * from './SelectRec';
 export * from './SelectRec3';
 export * from './GetDrug';
 export * from './GetGrade';
+export * from './ButtonOut';
+export * from './ShowDetail';

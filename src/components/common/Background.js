@@ -29,10 +29,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     width: '100%',
     height: '100%',
-    maxWidth: 440,
     alignSelf: 'center',
     alignItems: 'center',
-    justifyContent: 'center',
+    // justifyContent: 'center',
     // android:windowSoftInputMode="adjustPan",
 
   },

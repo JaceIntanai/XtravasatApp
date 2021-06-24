@@ -5,11 +5,17 @@ class PositionPage extends Component{
 
     state = {
         position: null,
+        uID: this.props.navigation.state.params.uID,
+        number: this.props.navigation.state.params.number,
     }
 
     async onClick(select){
         await this.setState({ position: select });
-        this.props.navigation.navigate('cameraP', { image_position: this.state.position });
+        this.props.navigation.navigate('cameraP', { 
+            image_position: this.state.position,
+            uID: this.state.uID,
+            number: this.state.number,
+        });
     };
 
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Background, BackButton, Textform, TextAge , Msg , Topbar , Dropdown as dd , Dropdown2 as dd2 , Subheader} from '../components/common'
 import { form , Subinput , NextButton , Codi } from '../components/common';
 import { codiseasedata , genderdata , welfaredata , predictdata } from '../components/data';
-import { ScrollView, Picker, View } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import { auth, db } from '../services';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 // import { Dropdown } from 'react-native-material-dropdown';
@@ -10,6 +10,7 @@ import { Dropdown } from 'react-native-material-dropdown-v2-fixed';
 import SectionedMultiSelect from 'react-native-sectioned-multi-select';
 class PatientPage extends Component{
     state = {
+        uid: this.props.navigation.state.params.uID,
         number: '',
         age: '',
         gender: '',
@@ -19,8 +20,9 @@ class PatientPage extends Component{
     }
 
     confirmClick(){
-        // db.setData(this.state.number)
+        
         this.props.navigation.navigate('sub', {
+            uID: this.state.uid,
             Pn: this.state.number,
             Pa: this.state.age,
             Pg: this.state.gender,
@@ -40,7 +42,7 @@ class PatientPage extends Component{
                     />
                     ผู้ป่วยใหม่
                 </Topbar>
-                <ScrollView style={form.form}>
+                <ScrollView >
 
                     <Msg> หมายเลขอ้างอิง * </Msg>
                     <Textform 

@@ -13,6 +13,8 @@ class CameraPage extends Component{
   state = {
     uri: null,
     position: null,
+    uID: this.props.navigation.state.params.uID,
+    number: this.props.navigation.state.params.number,
   }
 
   async componentDidMount(){
@@ -26,7 +28,12 @@ class CameraPage extends Component{
   setUp = (input) => {
     this.setState({ uri: input });
     // console.log(this.state.uri)
-    this.props.navigation.navigate('confirm', {image_uri:this.state.uri});
+    this.props.navigation.navigate('confirm', {
+      image_uri:this.state.uri,
+      uID: this.state.uID,
+      number: this.state.number,
+      position: this.state.position,
+    });
   }
 
   picture = (uri, path) => {

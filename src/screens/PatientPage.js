@@ -3,7 +3,7 @@ import { Background, BackButton, Textform, TextAge , Msg , Topbar , Dropdown as 
 import { form , Subinput , NextButton , Codi } from '../components/common';
 import { codiseasedata , genderdata , welfaredata , predictdata } from '../components/data';
 import { ScrollView, View } from 'react-native';
-import { auth, db } from '../services';
+import { auth, db, styles } from '../services';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 // import { Dropdown } from 'react-native-material-dropdown';
 import { Dropdown } from 'react-native-material-dropdown-v2-fixed';

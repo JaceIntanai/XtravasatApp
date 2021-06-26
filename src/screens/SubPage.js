@@ -67,7 +67,7 @@ class PatientPage extends Component{
                     />
                     ผู้ป่วยใหม่
                 </Topbar>
-                <ScrollView >
+                <ScrollView style={form.form}>
 
                     <Msg> ยา * </Msg>
                     <SectionedMultiSelect

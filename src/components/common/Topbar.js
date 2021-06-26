@@ -12,9 +12,10 @@ const Topbar = ({ children }) => (
 
 const styles = StyleSheet.create({
   container: {
+    // flex: 1,
     backgroundColor: '#005daa',
     width : '120%',
-    height : '10%',
+    height : 120,
     alignItems: 'center',
     justifyContent: 'center',
     // paddingHorizontal: 10,
@@ -22,6 +23,7 @@ const styles = StyleSheet.create({
     // marginVertical: -20,
   },
   header: {
+    
     fontSize: 18,
     color: 'white',
     // marginTop: 60,

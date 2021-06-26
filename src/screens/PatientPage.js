@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Background, BackButton, Textform, TextAge , Msg , Topbar , Dropdown as dd , Dropdown2 as dd2 , Subheader} from '../components/common'
-import { form , Subinput , NextButton , Codi } from '../components/common';
+import { form , Subinput , NextButton , Codi, KeyboardView} from '../components/common';
 import { codiseasedata , genderdata , welfaredata , predictdata } from '../components/data';
-import { ScrollView, View } from 'react-native';
+import { ScrollView, View, KeyboardAvoidingView } from 'react-native';
 import { auth, db, styles } from '../services';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 // import { Dropdown } from 'react-native-material-dropdown';
@@ -35,14 +35,13 @@ class PatientPage extends Component{
     render(){
         return (
             <Background>
-                
                 <Topbar>
                     <BackButton 
                         goBack={() => this.props.navigation.navigate('home')}
                     />
                     ผู้ป่วยใหม่
                 </Topbar>
-                <ScrollView >
+                <ScrollView style={form.form}>
 
                     <Msg> หมายเลขอ้างอิง * </Msg>
                     <Textform 

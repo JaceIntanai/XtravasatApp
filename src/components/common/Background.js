@@ -11,7 +11,7 @@ const Background = ({ children }) => (
     // resizeMode="repeat"
     style={styles.background}
   >
-    <KeyboardAvoidingView style={styles.container} behavior="padding">
+    <KeyboardAvoidingView style={styles.container} behavior="padding" enabled keyboardVerticalOffset={-340}> 
       {children}
     </KeyboardAvoidingView>
   </ImageBackground>

@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 import { Logo, Button, Background, ButtonOut , ButtonLink , Header, Topbar, form} from '../components/common'
 import { auth } from '../services';
-import { View, ScrollView } from 'react-native';
+import { View, ScrollView, Text } from 'react-native';
 
 class HomePage extends Component{
 
@@ -35,10 +35,10 @@ class HomePage extends Component{
     render(){
         return (
         <Background>
-            <Header> XtraVasat </Header>
+            <Header><Text>XtraVasat</Text></Header>
             
             <View style={{flexDirection: 'row'}}>
-                <View style={{backgroundColor: '#005daa', height: 1, flex: 1, }} />
+                <View style={{backgroundColor: '#005daa', height: 2, flex: 1, }} />
             </View>
             <ScrollView>
 

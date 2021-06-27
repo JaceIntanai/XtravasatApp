@@ -1,15 +1,41 @@
 import React, { Component } from 'react';
-import { Logo, Button, BackButton, Topbar, Background, Header, Paragraph } from '../components/common'
+import { Logo, Button, BackButton, Topbar, Background, Header, Paragraph, ButtonOut } from '../components/common'
 import {Image, StyleSheet, Dimensions} from 'react-native';
 
 class DetailPage extends Component{
     
     state = {
-        position: this.props.navigation.state.params.position,
-        uri: this.props.navigation.state.params.uri,
-        result: this.props.navigation.state.params.result
+        // position: this.props.navigation.state.params.position,
+        // uri: this.props.navigation.state.params.uri,
+        // result: this.props.navigation.state.params.result,
+        //ต้องได้จาก prop ของหน้า history, trace, success
+        number: '',
+        patient: [],
     }
 
+    async componentDidMount(){
+
+        await db.ref('user/' + this.state.uID + '/patients/' + this.state.number).on('value', (snapshot) => {
+            const data = [];
+            data.push({
+            number: snapshot.key,
+            status: snapshot.val().status,
+            data: snapshot.val()
+            });
+            this.setState({ patient });
+        });
+        console.log(this.state.patient)
+    }
+
+    checkStatus() {
+        if(this.state.patient.status){ 
+            return(
+            <ButtonOut>
+                ปิดเคส
+            </ButtonOut> 
+            )
+        }
+    }
     render(){
         return (
             <Background>
@@ -28,9 +54,7 @@ class DetailPage extends Component{
                     <Header>{this.state.result}</Header>
                 </Paragraph>
 
-                <Button onPress={()=>this.props.navigation.navigate('home')}>
-                    ยืนยัน
-                </Button>
+                {this.checkStatus()}
             </Background>
         );
     }

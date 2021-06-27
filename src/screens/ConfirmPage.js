@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Logo, Button, Background, Header } from '../components/common'
 import {Image, StyleSheet, Dimensions} from 'react-native';
 import { auth, db } from '../services';
-
+// import storage from '@react-native-firebase/storage';
 class ConfirmPage extends Component{
 
     constructor(props){
@@ -20,6 +20,7 @@ class ConfirmPage extends Component{
 
     async componentDidMount() {
         const image_uri = this.props.navigation.getParam('image_uri',null);
+        console.log("i'm in componentDidMount");
         console.log(image_uri);
         await this.setState({uri: image_uri})
     }
@@ -28,6 +29,7 @@ class ConfirmPage extends Component{
         console.log(this.state.uID)
         db.updatePicture(this.state.uID, this.state.number, this.state.position, this.state.uri)
         console.log("Already Update Image")
+        console.log(this.state.uri)
         this.props.navigation.navigate('loading',{
             uID: this.state.uID,
             number: this.state.number,

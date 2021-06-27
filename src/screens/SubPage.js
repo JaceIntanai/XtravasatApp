@@ -11,6 +11,7 @@ import { auth, db } from '../services';
 import { Dropdown } from 'react-native-material-dropdown-v2-fixed';
 import SectionedMultiSelect from 'react-native-sectioned-multi-select';
 import DateTimePicker from "react-native-modal-datetime-picker";
+import moment from "moment";
 
 class PatientPage extends Component{
 
@@ -20,23 +21,15 @@ class PatientPage extends Component{
         mg: '',
         ml: '',
         mll: '',
-        time: '',
         fPickerVisible: false,
+        time_start: moment().format('DD MMM YYYY HH:mm'),
+        time_found: moment().format('DD MMM YYYY HH:mm'),
     }
 
-    handleDate = e => {
-        // console.log(e)
-        months = ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม']
-        m = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-        date = e.substring(0, 2) * 1
-        index = m.indexOf(e.substring(3, 6))
-        year = 543 + (e.substring(7, 11) * 1)
-        month = months[index]
-        time = e.substring(12, e.length)
-        day = `${date} ${month} ${year} ${time}`
-        return day;
+    handleChange = (input, e) => {
+        // set input for all state
+        this.setState({ [input]: e });
     };
-
 
     confirmClick(){
         db.setData(this.state.uid, this.props.navigation.state.params.Pn)
@@ -51,7 +44,7 @@ class PatientPage extends Component{
             this.state.mg,
             this.state.ml,
             this.state.mll,
-            this.state.time)
+            this.state.time_start)
         this.props.navigation.navigate('position', {
             uID: this.state.uid,
             number: this.props.navigation.state.params.Pn,        
@@ -118,7 +111,7 @@ class PatientPage extends Component{
                         isVisible={this.state.fPickerVisible}
                         onConfirm={(e) => {
                             e = moment(e).format('DD MMM YYYY HH:mm');
-                            handleChange('timeUsing', e)
+                            this.handleChange('time_start', e)
                             this.setState({ fPickerVisible: false })
                         }}
                         onCancel={() => { this.setState({ fPickerVisible: false }) }}
@@ -138,13 +131,14 @@ class PatientPage extends Component{
                             onPress={() => this.setState({ fPickerVisible: true })}
                             titleStyle={{ color: 'red', paddingLeft: 10 }}
                     >
+                        <Msg>{this.state.time_start}</Msg>
                     </Calendar>
                     <Msg> เวลาที่เกิด extravasation * </Msg>
                     <DateTimePicker
                         isVisible={this.state.fPickerVisible}
                         onConfirm={(e) => {
                             e = moment(e).format('DD MMM YYYY HH:mm');
-                            handleChange('timeUsing', e)
+                            this.handleChange('time_found', e)
                             this.setState({ fPickerVisible: false })
                         }}
                         onCancel={() => { this.setState({ fPickerVisible: false }) }}
@@ -159,21 +153,20 @@ class PatientPage extends Component{
                                     color='#165d5a'
                                 />
                             }
-                            // title={this.handleDate(values.timeUsing)}
                             type="outline"
                             onPress={() => this.setState({ fPickerVisible: true })}
                             titleStyle={{ color: 'red', paddingLeft: 10 }}
                     >
+                        <Msg>{this.state.time_start}</Msg>
                     </Calendar>
                     <Msg> แจ้งเตือนสำหรับการถ่ายครั้งต่อไป * </Msg>
                     <Dropdown 
                         data={ alertdata }
                         underlineColor="transparent"
-                        label={'โปรดระบุ...'}
+                        // label={'โปรดระบุ...'}
                         dropdownOffset={{ top: 10 }}
                         value={this.state.time}
                         onChangeText={time => this.setState({ time })}
-                        // containerStyle={dd3.dropdown}
                         style={dd3.dropdown}
                     />
                     <NextButton 

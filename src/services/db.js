@@ -1,4 +1,5 @@
 import { db } from "./firebase";
+import moment from "moment";
 
 export const setData = (uID, patientId) => {
     db.ref('user/' + uID + '/patients/' + patientId)
@@ -54,7 +55,8 @@ export const updateStatus = (uID, patientId) => {
 }
 
 export const setImage = (uID, patientId) => {
-    time_now = 0000;
+    const time_now = moment().format('DD-MMM-YYYY-HH-mm');
+    console.log(time_now)
     db.ref('user/' + uID + '/patients/' + patientId + '/images/' + time_now)
     .set({
         image: '',

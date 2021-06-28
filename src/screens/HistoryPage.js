@@ -41,24 +41,13 @@ class HistoryPage extends Component{
         // console.log(this.state.image, this.state.position)
     }
 
-    // recvData = () => {
-    //     // console.log(this.state.uID, this.state.number)
-    //     db.ref('user/' + this.state.uID + '/patients/' + this.state.number).on('value', (snapshot) => {
-    //         let image = snapshot.val().image;
-    //         let position = snapshot.val().position;
-    //         console.log(image, position)
-    //         this.setState({ image: image , position: position})
-    //     });
-        
-    //     console.log(this.state.image, this.state.position)
-    // }
-
     renderData() {
         return this.state.data.map((item) => {
             return (
                 <ButtonLink 
                     // style={}
-                    onPress={item.number}
+                    onPress={() => this.confirmClick(item.number)}
+                    // onPress={}
                 >
                     หมายเลขอ้างอิง : {item.number}{"\n"}
                     {/* สิทธิการรักษา : {item.welfare}{"\n"} */}
@@ -66,6 +55,16 @@ class HistoryPage extends Component{
             );
         });
     }
+
+    confirmClick(patient){
+        console.log(patient)
+        this.props.navigation.navigate('detail', {
+            number: patient,  
+            uID: this.state.uID,
+        });
+    }
+
+
     render(){
         return (
             <Background>

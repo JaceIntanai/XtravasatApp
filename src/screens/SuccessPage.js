@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Logo, Button, Background, Header , Topbar , BackButton } from '../components/common'
+import { Logo, Button, Background, Header , Topbar , BackButton, ButtonLink } from '../components/common'
 import { db } from '../services/firebase';
 
 class SuccessPage extends Component{
@@ -25,7 +25,7 @@ class SuccessPage extends Component{
             const data = [];
             console.log("childSnap")
             snapshot.forEach(function(childSnap) {
-                if (childSnap.val().status == "false") {
+                if (childSnap.val().status === false) {
                     data.push({
                     number: childSnap.val().number,
                     img: childSnap.val().image,
@@ -45,7 +45,8 @@ class SuccessPage extends Component{
             return (
                 <ButtonLink 
                     // style={}
-                    onPress={item.number}
+                    onPress={() => this.confirmClick(item.number)}
+                    // onPress={}
                 >
                     หมายเลขอ้างอิง : {item.number}{"\n"}
                     {/* สิทธิการรักษา : {item.welfare}{"\n"} */}
@@ -53,6 +54,15 @@ class SuccessPage extends Component{
             );
         });
     }
+
+    confirmClick(patient){
+        console.log(patient)
+        this.props.navigation.navigate('detail', {
+            number: patient,  
+            uID: this.state.uID,
+        });
+    }
+
 
     render(){
         return (

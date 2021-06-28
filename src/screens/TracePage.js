@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Background , Topbar , BackButton} from '../components/common'
+import {Background , Topbar , BackButton , ButtonLink} from '../components/common'
 import { db } from '../services/firebase';
 import { auth, db as db_service, styles } from '../services';
 import PatientPage from './PatientPage';
@@ -26,7 +26,10 @@ class TracePage extends Component{
             const data = [];
             console.log("childSnap")
             snapshot.forEach(function(childSnap) {
-                if (childSnap.val().status == "true") {
+                console.log("TracePage")
+                // console.log(childSnap.val().number, childSnap.val().status)
+                // console.log(childSnap.val().status)
+                if (childSnap.val().status === true) {
                     data.push({
                     number: childSnap.val().number,
                     img: childSnap.val().image,
@@ -46,7 +49,8 @@ class TracePage extends Component{
             return (
                 <ButtonLink 
                     // style={}
-                    onPress={item.number}
+                    onPress={() => this.confirmClick(item.number)}
+                    // onPress={}
                 >
                     หมายเลขอ้างอิง : {item.number}{"\n"}
                     {/* สิทธิการรักษา : {item.welfare}{"\n"} */}
@@ -55,9 +59,12 @@ class TracePage extends Component{
         });
     }
 
-    closeCase (patientID) {
-        db_service.updateStatus(this.state.uID, patientID)
-        // Refresh Screen
+    confirmClick(patient){
+        console.log(patient)
+        this.props.navigation.navigate('detail', {
+            number: patient,  
+            uID: this.state.uID,
+        });
     }
 
     render(){

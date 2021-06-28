@@ -44,7 +44,9 @@ class PatientPage extends Component{
             this.state.mg,
             this.state.ml,
             this.state.mll,
-            this.state.time_start)
+            this.state.time,
+            this.state.time_start,
+            this.state.time_found)
         this.props.navigation.navigate('position', {
             uID: this.state.uid,
             number: this.props.navigation.state.params.Pn,        

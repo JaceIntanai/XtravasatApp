@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {Background , Topbar , BackButton} from '../components/common'
 import { db } from '../services/firebase';
+import { auth, db as db_service, styles } from '../services';
+import PatientPage from './PatientPage';
 
 class TracePage extends Component{
 
@@ -51,6 +53,11 @@ class TracePage extends Component{
                 </ButtonLink>
             );
         });
+    }
+
+    closeCase (patientID) {
+        db_service.updateStatus(this.state.uID, patientID)
+        // Refresh Screen
     }
 
     render(){

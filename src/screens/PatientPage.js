@@ -72,15 +72,6 @@ class PatientPage extends Component{
                             // containerStyle={dd.dropdown}
                             style={dd.dropdown}
                         />
-                        {/* <Picker
-                            selectedValue={this.state.gender}
-                            style={{height: 50, width: '100%'}}
-                            onValueChange={(itemValue, itemIndex) =>
-                                this.setState({gender: itemValue})
-                            }>
-                            <Picker.Item label="Male" value="male" />
-                            <Picker.Item label="Female" value="female" />
-                        </Picker> */}
                         
                     </Subinput>
 
@@ -107,16 +98,6 @@ class PatientPage extends Component{
                             // containerStyle={dd2.dropdown}
                             style={dd2.dropdown}
                         />
-                    {/* <Picker
-                        selectedValue={this.state.language}
-                        style={{height: 50, width: 100}}
-                        onValueChange={(itemValue, itemIndex) =>
-                            this.setState({language: itemValue})
-                        }>
-                        <Picker.Item label="Java" value="java" />
-                        <Picker.Item label="JavaScript" value="js" />
-                    </Picker> */}
-
 
                     <Msg> โรคร่วม (Co mobility) * </Msg>
                     <SectionedMultiSelect

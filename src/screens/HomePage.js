@@ -17,7 +17,9 @@ class HomePage extends Component{
     }
 
     tracePatient(){
-        this.props.navigation.navigate('trace')
+        this.props.navigation.navigate('trace',{
+            uID : this.props.navigation.state.params.uID
+        })
     }
     
     historyPatient(){
@@ -27,7 +29,9 @@ class HomePage extends Component{
     }
 
     successPatient(){
-        this.props.navigation.navigate('success')
+        this.props.navigation.navigate('success',{
+            uID : this.props.navigation.state.params.uID
+        })
     }
     recom(){
         this.props.navigation.navigate('recom')
